@@ -1,0 +1,17 @@
+name: GNIC deployment on OS
+run-name: GNIC binary deployment
+
+on:
+  push:
+    branches: [dev, main]
+
+jobs:
+    build-binary:
+        runs-on: blog
+        steps:
+            -
+                name: fetch latest changes
+                uses: actions/checkout@v3
+            -
+                name: build binary
+                run: echo hi! this is $hostname
